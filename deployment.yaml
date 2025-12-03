@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: imagegallery
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: imagegallery
+  template:
+    metadata:
+      labels:
+        app: imagegallery
+    spec:
+      containers:
+      - name: imagegallery
+        image: imagegallery:latest
+        ports:
+        - containerPort: 5032

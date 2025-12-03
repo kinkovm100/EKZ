@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Update="Views\**\*" CopyToOutputDirectory="PreserveNewset" />
+    <Content Update="Controllers\**\*" CopyToOutputDirectory="PreserveNewset" />
+    <Content Update="bin\**\*" CopyToOutputDirectory="PreserveNewset" />
+    <Content Update="Migrations\**\*" CopyToOutputDirectory="PreserveNewset" />
+    <Content Update="Models\**\*" CopyToOutputDirectory="PreserveNewset" />
+    <Content Update="obj\**\*" CopyToOutputDirectory="PreserveNewset" />
+    <Content Update="Properties\**\*" CopyToOutputDirectory="PreserveNewset" />
+    <Content Update="wwwroot\**\*" CopyToOutputDirectory="PreserveNewset" />
+
+    <PackageReference Include="Microsoft.EntityframeworkCore.Design" Version="9.*">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityframeworkCore.Sqlite" Version="9.*" />
+  </ItemGroup>
+
+</Project>
